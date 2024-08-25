@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Check</h1>
+        <div class="search-bar">
+            <input type="text" id="locationInput" placeholder="Enter city name">
+            <button id="search-button">Get Weather</button>
+        </div>
+        <div class="options">
+            <label for="sort-options">Sort by:</label>
+            <select id="sort-options">
+                <option value="default">Default</option>
+                <option value="temp-high-low">Temperature (High to Low)</option>
+                <option value="temp-low-high">Temperature (Low to High)</option>
+            </select>
+            <label for="filter-options">Filter by Condition:</label>
+            <select id="filter-options">
+                <option value="all">All</option>
+                <option value="rain">Rain</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+            </select>
+        </div>
+        <div id="weatherContainer" class="weather-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue; /* Full background is light blue */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the app */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%;
+    max-width: 600px; /* Limit the width of the app for larger screens */
+    box-sizing: border-box; /* Ensure padding does not affect the width */
+    text-align: center; /* Center text inside the app */
+    overflow: hidden; /* Hide overflow in the container */
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#locationInput {
+    padding: 10px;
+    width: 80%; /* Adjust width as needed */
+    box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #005eff;
+    color: white;
+    margin-top: 9px;
+}
+
+.options {
+    margin: 20px 0;
+    flex-direction: column; /* Stack options vertically */
+    align-items: center;
+}
+
+.options label {
+    margin: 9px 0; /* Space out labels from the dropdowns */
+}
+
+#sort-options, #filter-options {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.weather-container {
+    margin-top: 20px;
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
+
+.weather-info, .forecast-info {
+    margin: 20px 0;
+}
+
+.forecast-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-day {
+    background: rgba(139, 130, 130, 0.8); /* Slightly transparent white background for the forecast days */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%; /* Full width within the container */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.forecast-day h3 {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
