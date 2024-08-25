@@ -1,6 +1,6 @@
 document.getElementById('search-button').addEventListener('click', function() {
     const city = document.getElementById('locationInput').value;
-    console.log(`Fetching weather data for: ${city}`); // Debugging line
+    console.log(`Fetching weather data for: ${city}`); 
     fetchWeatherData(city);
 });
 
@@ -15,14 +15,14 @@ document.getElementById('filter-options').addEventListener('change', function() 
 let forecastData = [];
 
 async function fetchWeatherData(city) {
-    const apiKey = '61ad039c650d490a9ba53215241905'; // Replace with your actual API key
+    const apiKey = '61ad039c650d490a9ba53215241905';
     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7`;
 
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        console.log('API Response:', data); // Debugging line
+        console.log('API Response:', data); 
 
         if (response.ok) {
             forecastData = data.forecast.forecastday;
@@ -32,7 +32,7 @@ async function fetchWeatherData(city) {
             displayError(data.error.message);
         }
     } catch (error) {
-        console.error('Fetch Error:', error); // Debugging line
+        console.error('Fetch Error:', error); 
         displayError('Unable to fetch weather data.');
     }
 }
